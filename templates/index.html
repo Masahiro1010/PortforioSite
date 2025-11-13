@@ -1,0 +1,217 @@
+{% load static %}
+<!doctype html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Masahiro Yasui | Portfolio</title>
+        <meta name="description" content="Masahiro Yasui's portfolio site." />
+        <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Shippori+Mincho:wght@400;600&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="{% static 'styles.css' %}">
+        <link rel="icon" href="{% static 'assets/favicon.svg' %}" type="image/svg+xml">
+    </head>
+    <body>
+        <!-- ===== ローディング演出 ===== -->
+        <div id="loading-screen">
+            <h1 class="loading-title">
+                MASAHIRO<br>
+                YASUI’S<br>
+                PORTFORIO
+            </h1>
+        </div>
+
+        <!-- ===== メインコンテンツ ===== -->
+        <div id="main-content" class="hidden">
+            <!-- ===== Hero / First View ===== -->
+            <header class="hero">
+                <div class="hero__left">
+                    <p class="pill reveal-up" id="theme-toggle" style="--d:0.05s">Black</p>
+                    <h1 class="brand reveal-up" style="--d:0.05s">
+                        MASAHIRO<br>
+                        YASUI’S<br>
+                        PORTFORIO
+                    </h1>
+                    <nav class="vnav reveal-up" style="--d:0.05s" aria-label="section navigation">
+                        <a href="#about" class="vnav__link">about</a>
+                        <a href="#works" class="vnav__link">works</a>
+                        <a href="#contact" class="vnav__link">contact</a>
+                    </nav>
+                </div>
+
+                <div class="hero__divider"></div>
+
+                <div class="hero__right">
+                    <div class="hero__photo" role="img" aria-label="main visual"></div>
+                    <button class="hamburger" aria-label="menu" aria-expanded="false">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <div class="scroll-cue" aria-hidden="true">↓</div>
+                </div>
+            </header>
+
+            <!-- ===== About ===== -->
+            <section id="about" class="section section--about">
+                <h2 class="section-title">
+                    <span>about</span>
+                </h2>
+
+                <div class="about">
+                    <div class="about__photo" role="img" aria-label="profile photo"></div>
+                    <div class="about__text">
+                        <h3 class="jp-title">安井将大 / やすい まさひろ</h3>
+                        <p class="muted">22歳 / 山口県出身</p>
+
+                        <p>未経験で情報系専門学校に入学後<br class="br-md">基本情報技術者試験に合格。</p>
+                        <p>その後 どんな情報でも表現できる<br class="br-md">WEB開発に興味を持ち独学を開始。</p>
+                        <p>細部まで動きでユーザーを楽しませられる<br class="br-md">WEB開発者を目指しています。</p>
+
+                        <p class="more">
+                            <a href="#about-more" class="more__btn">
+                                <span class="arrow"></span>
+                                more…
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ===== Works ===== -->
+            <section id="works" class="section section--works">
+                <h2 class="section-title">
+                    <span>works</span>
+                </h2>
+
+                <ol class="works-list">
+                    <!-- item 1 -->
+                    <li class="work-item">
+                        <div class="work-inner">
+                            <figure class="work-media">
+                                <img src="{% static 'assets/work_recoreco.png' %}" alt="RecoReco プロダクト画像" loading="lazy" decoding="async">
+                            </figure>
+                            <div class="work-content">
+                                <p class="work-kicker">WebApplication</p>
+                                <h3 class="work-title">
+                                    <span>RecoReco</span>
+                                    <i class="work-underline" aria-hidden="true"></i>
+                                </h3>
+                                <p class="work-desc">
+                                    LINEから記録できる家計簿アプリを開発しました。シンプルで分かりやすいデザインを意識しました。
+                                </p>
+                                <p class="work-tech muted">Django / Render / Bootstrap</p>
+                                <p class="work-cta">
+                                    <a class="cta-link" href="#">
+                                        <span class="arrow-box" aria-hidden="true"></span>
+                                        <span class="cta-text">more…</span>
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+
+                    <!-- item 2 -->
+                    <li class="work-item">
+                        <div class="work-inner">
+                            <figure class="work-media">
+                                <img src="{% static 'assets/work_n.png' %}" alt="N ゲーム画像" loading="lazy" decoding="async">
+                            </figure>
+                            <div class="work-content">
+                                <p class="work-kicker">WebApplication</p>
+                                <h3 class="work-title">
+                                    <span>N</span>
+                                    <i class="work-underline" aria-hidden="true"></i>
+                                </h3>
+                                <p class="work-desc">
+                                    Hit and Blow に新要素を追加したゲーム。内部のゲームシステム開発まで行っています。
+                                </p>
+                                <p class="work-tech muted">Django / Render / Bootstrap</p>
+                                <p class="work-cta">
+                                    <a class="cta-link" href="#">
+                                        <span class="arrow-box" aria-hidden="true"></span>
+                                        <span class="cta-text">more…</span>
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+
+                    <!-- item 3 -->
+                    <li class="work-item">
+                        <div class="work-inner">
+                            <figure class="work-media">
+                                <img src="{% static 'assets/work_portfolio.png' %}" alt="Portfolio サイト画像" loading="lazy" decoding="async">
+                            </figure>
+                            <div class="work-content">
+                                <p class="work-kicker">WebApplication</p>
+                                <h3 class="work-title">
+                                    <span>PortForio</span>
+                                    <i class="work-underline" aria-hidden="true"></i>
+                                </h3>
+                                <p class="work-desc">
+                                    自身のポートフォリオサイトを開発しました。Figmaを用いてデザイン重視で製作しました。
+                                </p>
+                                <p class="work-tech muted">Django / Render / Bootstrap / Figma</p>
+                                <p class="work-cta">
+                                    <a class="cta-link" href="#">
+                                        <span class="arrow-box" aria-hidden="true"></span>
+                                        <span class="cta-text">more…</span>
+                                    </a>
+                                </p>
+                            </div>
+                        </div> 
+                    </li>
+                </ol>
+                
+                <!--
+                <div class="works-all">
+                    <a class="all-link" href="#">
+                        <span class="arrow-box" aria-hidden="true"></span>
+                        <span class="all-text">All works…</span>
+                    </a>
+                </div>
+                -->
+            </section>
+
+
+            <!-- ===== Contact ===== -->
+            <section id="contact" class="section section--contact">
+                <h2 class="section-title">
+                    <span>contact</span>
+                </h2>
+
+                <div class="contact-wrap">
+                    <p class="contact-headline">
+                        最後まで読んでくださりありがとうございました
+                    </p>
+
+                    <p class="contact-email">
+                        <a class="email-pill" href="mailto:yasui.masahiro7316@gmail.com" aria-label="メールで連絡する">
+                            yasui.masahiro7316@gmail.com
+                        </a>
+                    </p>
+
+                    <p class="contact-note muted">上記メールアドレスにお気軽にご連絡ください</p>
+                </div>
+            </section>
+
+            <!-- ===== Footer ===== -->
+            <footer class="site-footer site-footer--band">
+                <div class="footer-inner">
+                    <p class="footer-brand">
+                        MASAHIRO YASUI’S<br>PORTFORIO
+                    </p>
+
+                    <nav class="footer-nav" aria-label="footer navigation">
+                        <a href="#top" class="footer-chip">top</a>
+                        <a href="#about" class="footer-chip">about</a>
+                        <a href="#works" class="footer-chip">works</a>
+                    </nav>
+                </div>
+            </footer>
+        </div>
+
+
+        <script src="{% static 'script.js' %}"></script>
+    </body>
+</html>
